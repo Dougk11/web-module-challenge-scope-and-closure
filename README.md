@@ -59,6 +59,7 @@ You will be running your tests in one terminal and debugging in the other. As yo
 Edit the `ReadMe` file with your answers to the questions below.
 
 1. In your own words, define closure (1-2 sentences).
+  Closures occur or come into existence when a function is nested in another function. When this happens, the nested function has access to the scope of the outer function, so it will be able to access its parent's variables. The parent function does not inherit the child's scope though. 
 2. Study the following code, then answer the questions below.
 
 ```js
@@ -80,9 +81,14 @@ dansRoll();
 ```
 
 a. Where is closure used in this code? How can you tell?
-b. Compare and contrast calling `dansRoll` the first and second time. What is always the same? What could change?
-c. What is the lexical scope of `newRoll`? 
+Closure is used in the nested function of personalDice. You can tell because the nested function uses the argument from its parent function. It uses the "name" that the personalDice, the parent function, is being passed. 
 
+b. Compare and contrast calling `dansRoll` the first and second time. What is always the same? What could change?
+
+The name for this const will always be the same, but the rolled number will change. So for the first roll and second roll it will have Dan as the name, but the rolled number could vary. 
+
+c. What is the lexical scope of `newRoll`? 
+newRoll can access any of its local variables i.e newRoll, or its parents' variables or anything else in its parents' scope, i.e name.
 
 ### Task 3 - Stretch Goals
 
